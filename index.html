@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" href="./images/icon.png" />
+    <link rel="shortcut icon" href="./images/icon.png" type="image/png" />
+    <title>Transactions</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="flex-col">
+      <img class="logo-image" src="./images/logo.png" alt="Logo" />
+      <div class="flex-col">
+        <p class="login-text">Log in to get started</p>
+        <form class="login-form flex-row" action="/">
+          <input type="text" name="user-name" placeholder="User" required />
+          <input type="password" name="pin" placeholder="PIN" required />
+          <button class="login-submit" type="submit">&rarr;</button>
+        </form>
+      </div>
+    </header>
+    <section class="balance flex-row hidden">
+      <div class="balance-text">
+        <p class="current-balance">Current balance</p>
+        <p class="balance-date">
+          As of <b><span class="update-date"></span></b>
+        </p>
+      </div>
+      <p class="balance-value"></p>
+    </section>
+    <div class="transactions-actions">
+      <section class="transactions hidden">
+        <div class="transactions-container flex-col"></div>
+      </section>
+      <section class="actions flex-col hidden">
+        <div class="action transfer flex-col">
+          <h2>Transfer Money</h2>
+          <form class="action-form flex-row" action="/">
+            <input type="text" name="to-user" placeholder="To User" required />
+            <input
+              type="number"
+              name="amount"
+              min="1"
+              placeholder="Amount"
+              required
+            />
+            <button class="transfer-btn" type="submit">&rarr;</button>
+          </form>
+        </div>
+        <div class="action loan flex-col">
+          <h2>Request Loan</h2>
+          <form class="action-form flex-row" action="/">
+            <input type="number" name="amount" placeholder="Amount" required />
+            <button class="loan-btn" type="submit">&rarr;</button>
+          </form>
+        </div>
+        <div class="action close-account flex-col">
+          <h2>Close Account</h2>
+          <form class="action-form flex-row" action="/">
+            <input
+              type="text"
+              name="user-name"
+              placeholder="Confirm User"
+              required
+            />
+            <input
+              type="password"
+              name="pin"
+              placeholder="Confirm PIN"
+              required
+            />
+            <button class="close-account-btn" type="submit">&rarr;</button>
+          </form>
+        </div>
+        <button class="logout-btn btn">Log Out</button>
+      </section>
+    </div>
+  </body>
+</html>

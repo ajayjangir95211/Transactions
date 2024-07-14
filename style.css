@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 4px;
+}
+
+body {
+  /* font-family: Helvetica, sans-serif; */
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3rem;
+  background-color: #e2e2e2;
+}
+
+button {
+  padding: 2rem 3rem;
+  border-radius: 256rem;
+  border: none;
+  background-color: #ffffff;
+  color: #000;
+  cursor: pointer;
+}
+
+section {
+  padding: 3% 5%;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+header {
+  padding: 2% 3%;
+}
+
+.login-text {
+  font-weight: 600;
+  font-size: 8rem;
+}
+
+.logo-image {
+  width: 13rem;
+}
+
+.login-form input {
+  /* height: 8rem; */
+  width: 21rem;
+  padding: 2rem 3rem;
+  border-radius: 256rem;
+  border: none;
+}
+
+.login-form input::placeholder {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+input:focus {
+  outline: solid 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+.login-submit {
+  background-color: transparent;
+  width: 8rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.5s;
+  padding: 1rem 2rem;
+}
+
+.login-submit:hover {
+  transform: scale(2);
+}
+
+.balance {
+  justify-content: space-between;
+}
+
+.current-balance {
+  font-weight: 600;
+  font-size: 5rem;
+}
+
+.balance-value {
+  font-weight: 600;
+  font-size: 8rem;
+}
+
+.transactions-container {
+  align-items: stretch;
+  gap: 0;
+  max-height: 50vh;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 3rem;
+}
+
+.transaction {
+  justify-content: space-between;
+  padding: 5% 8%;
+}
+
+.transaction-type {
+  color: #ffffff;
+  padding: 3% 5%;
+  border-radius: 256rem;
+}
+
+.transaction-date {
+  text-wrap: nowrap;
+}
+
+.transaction-value {
+  font-size: 5rem;
+}
+
+.deposit {
+  background-color: #52bf7b;
+}
+
+.withdraw {
+  background-color: #e82f5b;
+}
+
+.action {
+  padding: 5rem 8rem;
+  border-radius: 3rem;
+  width: 100%;
+  max-width: 89rem;
+}
+
+.action-form {
+  justify-content: center;
+}
+
+.action-form input {
+  width: 37.5%;
+  padding: 2rem 3rem;
+  border-radius: 256rem;
+  border: none;
+}
+
+.transfer {
+  background-color: #ffc203;
+}
+
+.loan {
+  background-color: #66c872;
+}
+
+.close-account {
+  background-color: #f6485d;
+}
+
+@media screen and (min-width: 768px) {
+  .transactions-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .balance {
+    padding: 0 3%;
+  }
+}
